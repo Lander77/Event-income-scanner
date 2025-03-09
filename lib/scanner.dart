@@ -9,6 +9,7 @@ import 'package:qr_code_scanner/login.dart';
 import 'package:qr_code_scanner/qr_overlay.dart';
 import 'package:vibration/vibration.dart';
 import 'package:http/http.dart' as http;
+import 'package:wakelock_plus/wakelock_plus.dart';
 
 
 class ScannerPage extends StatefulWidget {
@@ -33,6 +34,9 @@ class _ScannerPageState extends State<ScannerPage> {
   @override
   void initState() {
     super.initState();
+
+    // Scherm aanhouden
+    WakelockPlus.enable();
 
     // Initialize the timer to check connectivity every 5 seconds (adjust as needed)
     _connectivityTimer = Timer.periodic(const Duration(seconds: 5), (timer) {
@@ -88,6 +92,7 @@ class _ScannerPageState extends State<ScannerPage> {
   void dispose() {
     _connectivityTimer.cancel();
     cameraController.dispose(); // Dispose the camera properly
+    WakelockPlus.disable();
     super.dispose();
   }
 
