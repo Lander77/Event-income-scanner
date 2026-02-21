@@ -36,7 +36,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                   const SizedBox(height: 10),
                   const Text(
-                    'Scan QR codes for entrance and to save interesting profiles.',
+                    'Scan QR codes of students for entrance.',
                     style: TextStyle(fontSize: 16, color: Colors.grey),
                     textAlign: TextAlign.center,
                   ),
@@ -54,19 +54,6 @@ class _HomePageState extends State<HomePage> {
                     label: const Text('Scan Entrance QR'),
                     style: ElevatedButton.styleFrom(
                       padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 30),
-                      textStyle: const TextStyle(fontSize: 18),
-                    ),
-                  ),
-                  const SizedBox(height: 15),
-                  ElevatedButton.icon(
-                    onPressed: () {
-                      // Navigate to QR Scanner for profiles
-                    },
-                    icon: const Icon(Icons.person_search),
-                    label: const Text('Scan Profile QR'),
-                    style: ElevatedButton.styleFrom(
-                      padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 30),
-                      backgroundColor: Colors.green,
                       textStyle: const TextStyle(fontSize: 18),
                     ),
                   ),
