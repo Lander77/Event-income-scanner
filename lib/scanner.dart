@@ -285,7 +285,7 @@ class _ScannerPageState extends State<ScannerPage> {
   }
 
   Future<void> sendPostRequest(String codeValue, String eventCode) async {
-    const url = 'https://scanninghappening.azurewebsites.net/api/scan';
+    const url = 'https://scanninghappening.azurewebsites.net/api/Scan';
     final uri = Uri.parse(url);
     var response = await http.post(
       uri,

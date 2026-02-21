@@ -116,7 +116,7 @@ class _LoginPageState extends State<LoginPage> {
   }
 
   Future<String?> verification(String eventCode) async {
-    const url = 'https://scanninghappening.azurewebsites.net/api/event';
+    const url = 'https://scanninghappening.azurewebsites.net/api/Event';
     final uri = Uri.parse(url);
 
     try {
